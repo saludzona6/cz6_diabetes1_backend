@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cie10S",
+      "handler": "Cie10.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cie10S/count",
+      "handler": "Cie10.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cie10S/:id",
+      "handler": "Cie10.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cie10S",
+      "handler": "Cie10.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cie10S/:id",
+      "handler": "Cie10.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cie10S/:id",
+      "handler": "Cie10.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

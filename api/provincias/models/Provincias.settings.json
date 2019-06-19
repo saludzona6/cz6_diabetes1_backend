@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "provincias",
+  "info": {
+    "name": "provincias",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

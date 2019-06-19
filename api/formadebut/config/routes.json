@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/formadebuts",
+      "handler": "Formadebut.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/formadebuts/count",
+      "handler": "Formadebut.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/formadebuts/:id",
+      "handler": "Formadebut.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/formadebuts",
+      "handler": "Formadebut.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/formadebuts/:id",
+      "handler": "Formadebut.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/formadebuts/:id",
+      "handler": "Formadebut.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

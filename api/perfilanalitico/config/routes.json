@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/perfilanaliticos",
+      "handler": "Perfilanalitico.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perfilanaliticos/count",
+      "handler": "Perfilanalitico.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perfilanaliticos/:id",
+      "handler": "Perfilanalitico.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/perfilanaliticos",
+      "handler": "Perfilanalitico.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/perfilanaliticos/:id",
+      "handler": "Perfilanalitico.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/perfilanaliticos/:id",
+      "handler": "Perfilanalitico.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

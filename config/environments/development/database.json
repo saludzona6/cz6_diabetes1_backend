@@ -1,0 +1,19 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-bookshelf",
+      "settings": {
+        "client": "pg",
+        "host": "localhost",
+        "port": 5432,
+        "database": "cz6_diab",
+        "username": "cz6",
+        "password": "cz6",
+        "enabled": true,
+        "defaultConnection": "default"
+      },
+      "options": {}
+    }
+  }
+}

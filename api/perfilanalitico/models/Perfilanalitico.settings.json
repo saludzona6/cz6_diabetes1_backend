@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "perfilanaliticos",
+  "info": {
+    "name": "perfilanalitico",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "frecuencia": {
+      "type": "string"
+    },
+    "registros": {
+      "collection": "registro",
+      "via": "reg_perfilanaliticos"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "formadebuts",
+  "info": {
+    "name": "formadebut",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

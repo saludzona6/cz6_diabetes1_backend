@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "cie10S",
+  "info": {
+    "name": "cie10",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "codigo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "registros_cie10": {
+      "collection": "registro",
+      "via": "reg_cie10s"
+    }
+  }
+}

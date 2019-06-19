@@ -1,0 +1,98 @@
+{
+  "connection": "default",
+  "collectionName": "pacientes",
+  "info": {
+    "name": "paciente",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "nombres": {
+      "type": "string"
+    },
+    "apellidos": {
+      "type": "string"
+    },
+    "identificacion": {
+      "default": "identificacion",
+      "unique": true,
+      "required": true,
+      "minLength": 10,
+      "type": "string"
+    },
+    "establecimiento": {
+      "model": "establecimiento"
+    },
+    "fecha_nacimiento": {
+      "type": "date"
+    },
+    "provincia_residencia": {
+      "model": "provincias"
+    },
+    "ciudad_residencia": {
+      "type": "string"
+    },
+    "edad_debut": {
+      "type": "integer"
+    },
+    "fecha_debut": {
+      "type": "date"
+    },
+    "forma_debut": {
+      "model": "formadebut"
+    },
+    "hb1Ac_debut": {
+      "type": "decimal"
+    },
+    "sexo": {
+      "type": "string"
+    },
+    "medico_cabecera": {
+      "type": "string"
+    },
+    "contacto_medico_cabecera": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string",
+      "unique": true
+    },
+    "tutor": {
+      "type": "string"
+    },
+    "complicaciones": {
+      "type": "text"
+    },
+    "comorbilidad": {
+      "type": "text"
+    },
+    "observaciones": {
+      "type": "text"
+    },
+    "forma_debut_desc": {
+      "type": "string"
+    },
+    "user": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "user_updated": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "registros": {
+      "collection": "registro",
+      "via": "paciente"
+    }
+  }
+}

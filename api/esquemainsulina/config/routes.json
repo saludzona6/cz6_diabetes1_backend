@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/esquemainsulinas",
+      "handler": "Esquemainsulina.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/esquemainsulinas/count",
+      "handler": "Esquemainsulina.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/esquemainsulinas/:id",
+      "handler": "Esquemainsulina.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/esquemainsulinas",
+      "handler": "Esquemainsulina.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/esquemainsulinas/:id",
+      "handler": "Esquemainsulina.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/esquemainsulinas/:id",
+      "handler": "Esquemainsulina.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

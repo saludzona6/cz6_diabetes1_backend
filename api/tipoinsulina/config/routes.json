@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tipoinsulinas",
+      "handler": "Tipoinsulina.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tipoinsulinas/count",
+      "handler": "Tipoinsulina.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tipoinsulinas/:id",
+      "handler": "Tipoinsulina.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tipoinsulinas",
+      "handler": "Tipoinsulina.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tipoinsulinas/:id",
+      "handler": "Tipoinsulina.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tipoinsulinas/:id",
+      "handler": "Tipoinsulina.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

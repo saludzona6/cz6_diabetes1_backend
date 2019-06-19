@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "tipoinsulinas",
+  "info": {
+    "name": "tipoinsulina",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string"
+    },
+    "tipo_reemplazo": {
+      "type": "string"
+    }
+  }
+}

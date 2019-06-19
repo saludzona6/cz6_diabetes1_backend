@@ -1,0 +1,58 @@
+{
+  "name": "cz6_diab_backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application.",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "lint": "eslint api/**/*.js config/**/*.js plugins/**/*.js"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "dependencies": {
+    "knex": "latest",
+    "lodash": "^4.17.5",
+    "pg": "7.11.0",
+    "strapi": "3.0.0-beta.3",
+    "strapi-admin": "3.0.0-beta.3",
+    "strapi-hook-bookshelf": "3.0.0-beta.3",
+    "strapi-hook-knex": "3.0.0-beta.3",
+    "strapi-plugin-content-manager": "3.0.0-beta.3",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.3",
+    "strapi-plugin-documentation": "3.0.0-beta.3",
+    "strapi-plugin-email": "3.0.0-beta.3",
+    "strapi-plugin-graphql": "3.0.0-beta.3",
+    "strapi-plugin-settings-manager": "3.0.0-beta.3",
+    "strapi-plugin-upload": "3.0.0-beta.3",
+    "strapi-plugin-users-permissions": "3.0.0-beta.3",
+    "strapi-utils": "3.0.0-beta.3"
+  },
+  "author": {
+    "name": "dztics",
+    "email": "",
+    "url": ""
+  },
+  "maintainers": [
+    {
+      "name": "dztics",
+      "email": "",
+      "url": ""
+    }
+  ],
+  "strapi": {
+    "uuid": "1613dcc9-b98e-493a-b3ae-ec2e76adfc07"
+  },
+  "engines": {
+    "node": "^10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "license": "MIT"
+}

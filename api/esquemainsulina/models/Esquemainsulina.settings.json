@@ -1,0 +1,37 @@
+{
+  "connection": "default",
+  "collectionName": "esquemainsulinas",
+  "info": {
+    "name": "esquemainsulina",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "registro": {
+      "model": "registro",
+      "via": "esquemainsulinas"
+    },
+    "tipoinsulina": {
+      "model": "tipoinsulina"
+    },
+    "a1": {
+      "type": "decimal"
+    },
+    "a2": {
+      "type": "decimal"
+    },
+    "a3": {
+      "type": "decimal"
+    },
+    "am": {
+      "type": "decimal"
+    },
+    "pm": {
+      "type": "decimal"
+    }
+  }
+}

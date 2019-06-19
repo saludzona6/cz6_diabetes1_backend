@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/provincias",
+      "handler": "Provincias.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/provincias/count",
+      "handler": "Provincias.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/provincias/:id",
+      "handler": "Provincias.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/provincias",
+      "handler": "Provincias.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/provincias/:id",
+      "handler": "Provincias.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/provincias/:id",
+      "handler": "Provincias.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

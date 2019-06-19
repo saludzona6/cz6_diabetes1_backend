@@ -1,0 +1,974 @@
+{
+  "paths": {
+    "/pacientes": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Paciente"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Paciente"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Paciente"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPaciente"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pacientes/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": []
+      }
+    },
+    "/pacientes/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Paciente"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Paciente"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Paciente"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPaciente"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Paciente": {
+        "required": [
+          "id",
+          "identificacion"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nombres": {
+            "type": "string"
+          },
+          "apellidos": {
+            "type": "string"
+          },
+          "identificacion": {
+            "type": "string",
+            "default": "identificacion",
+            "minLength": 10
+          },
+          "establecimiento": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "direccion": {
+                "type": "string"
+              },
+              "telefono": {
+                "type": "string"
+              },
+              "responsable": {
+                "type": "string"
+              },
+              "provincias": {
+                "type": "string"
+              }
+            }
+          },
+          "fecha_nacimiento": {
+            "type": "string"
+          },
+          "provincia_residencia": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              }
+            }
+          },
+          "ciudad_residencia": {
+            "type": "string"
+          },
+          "edad_debut": {
+            "type": "integer"
+          },
+          "fecha_debut": {
+            "type": "string"
+          },
+          "forma_debut": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              }
+            }
+          },
+          "hb1Ac_debut": {
+            "type": "number"
+          },
+          "sexo": {
+            "type": "string"
+          },
+          "medico_cabecera": {
+            "type": "string"
+          },
+          "contacto_medico_cabecera": {
+            "type": "string"
+          },
+          "direccion": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "string"
+          },
+          "tutor": {
+            "type": "string"
+          },
+          "complicaciones": {
+            "type": "string"
+          },
+          "comorbilidad": {
+            "type": "string"
+          },
+          "observaciones": {
+            "type": "string"
+          },
+          "forma_debut_desc": {
+            "type": "string"
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "establecimiento": {
+                "type": "string"
+              },
+              "nombres": {
+                "type": "string"
+              }
+            }
+          },
+          "user_updated": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "establecimiento": {
+                "type": "string"
+              },
+              "nombres": {
+                "type": "string"
+              }
+            }
+          },
+          "registros": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tipo": {
+                  "type": "string"
+                },
+                "kit_fecha": {
+                  "type": "string"
+                },
+                "kit_tirillas": {
+                  "type": "integer"
+                },
+                "kit_fecha_caducidad_glaucon": {
+                  "type": "string"
+                },
+                "reg_valor_hb1ac": {
+                  "type": "integer"
+                },
+                "reg_fecha_hb1ac": {
+                  "type": "string"
+                },
+                "reg_fondo_ojo": {
+                  "type": "string"
+                },
+                "reg_fondo_ojo_fecha": {
+                  "type": "string"
+                },
+                "reg_fondo_ojo_observaciones": {
+                  "type": "string"
+                },
+                "reg_valoracion_psicologica": {
+                  "type": "string"
+                },
+                "reg_valoracion_psicologica_fecha": {
+                  "type": "string"
+                },
+                "reg_control_nutricional": {
+                  "type": "string"
+                },
+                "reg_control_nutricional_fecha": {
+                  "type": "string"
+                },
+                "reg_control_medico": {
+                  "type": "string"
+                },
+                "reg_control_medico_fecha": {
+                  "type": "string"
+                },
+                "reg_taller_educacion": {
+                  "type": "string"
+                },
+                "reg_taller_educacion_fecha": {
+                  "type": "string"
+                },
+                "reg_taller_nutricion": {
+                  "type": "string"
+                },
+                "reg_taller_nutricion_fecha": {
+                  "type": "string"
+                },
+                "reg_control_podologia": {
+                  "type": "string"
+                },
+                "reg_control_podologia_fecha": {
+                  "type": "string"
+                },
+                "reg_actividad_fisica": {
+                  "type": "string"
+                },
+                "reg_actividad_fisica_tipo": {
+                  "type": "string"
+                },
+                "reg_actividad_fisica_descripcion": {
+                  "type": "string"
+                },
+                "reg_actividad_duracion": {
+                  "type": "string"
+                },
+                "reg_num_glaucemias_dia": {
+                  "type": "integer"
+                },
+                "reg_glucagon": {
+                  "type": "string"
+                },
+                "reg_glucagon_fecha_entrega": {
+                  "type": "string"
+                },
+                "reg_glucagon_fecha_vencimiento": {
+                  "type": "string"
+                },
+                "reg_peso": {
+                  "type": "number"
+                },
+                "reg_talla": {
+                  "type": "number"
+                },
+                "reg_imc": {
+                  "type": "number"
+                },
+                "reg_perimetro_abdominal": {
+                  "type": "number"
+                },
+                "reg_tanner": {
+                  "type": "string"
+                },
+                "reg_fum": {
+                  "type": "string"
+                },
+                "reg_menarca": {
+                  "type": "integer"
+                },
+                "reg_fecha_perfil_analitico": {
+                  "type": "string"
+                },
+                "reg_perfilanaliticos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reg_hipoglucemias_semana": {
+                  "type": "integer"
+                },
+                "reg_cie10s": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reg_observaciones": {
+                  "type": "string"
+                },
+                "paciente": {
+                  "type": "string"
+                },
+                "kit_calibracion_glaucometro_fecha": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "user_updated": {
+                  "type": "string"
+                },
+                "kit_calibracion_glaucometro": {
+                  "type": "string"
+                },
+                "kit_entrega_glucagon": {
+                  "type": "string"
+                },
+                "reg_lipodistrofia": {
+                  "type": "string"
+                },
+                "esquemainsulinas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewPaciente": {
+        "required": [
+          "identificacion"
+        ],
+        "properties": {
+          "nombres": {
+            "type": "string"
+          },
+          "apellidos": {
+            "type": "string"
+          },
+          "identificacion": {
+            "type": "string",
+            "default": "identificacion",
+            "minLength": 10
+          },
+          "establecimiento": {
+            "type": "string"
+          },
+          "fecha_nacimiento": {
+            "type": "string"
+          },
+          "provincia_residencia": {
+            "type": "string"
+          },
+          "ciudad_residencia": {
+            "type": "string"
+          },
+          "edad_debut": {
+            "type": "integer"
+          },
+          "fecha_debut": {
+            "type": "string"
+          },
+          "forma_debut": {
+            "type": "string"
+          },
+          "hb1Ac_debut": {
+            "type": "number"
+          },
+          "sexo": {
+            "type": "string"
+          },
+          "medico_cabecera": {
+            "type": "string"
+          },
+          "contacto_medico_cabecera": {
+            "type": "string"
+          },
+          "direccion": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "string"
+          },
+          "tutor": {
+            "type": "string"
+          },
+          "complicaciones": {
+            "type": "string"
+          },
+          "comorbilidad": {
+            "type": "string"
+          },
+          "observaciones": {
+            "type": "string"
+          },
+          "forma_debut_desc": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "user_updated": {
+            "type": "string"
+          },
+          "registros": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Paciente"
+    }
+  ]
+}
